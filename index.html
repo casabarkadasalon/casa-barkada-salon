@@ -13,6 +13,7 @@
       name="description"
       content="Casa Barkada Salon is a premium hair, nails, beauty, lashes and waxing salon in Al Barsha 1, Dubai. Book your appointment today."
     />
+
     <meta name="author" content="Casa Barkada Salon" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#F4A261" />
@@ -22,6 +23,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -33,44 +35,54 @@
   </head>
 
   <body>
+    <!-- HEADER -->
+
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#home" class="logo">
           <img src="assets/images/logo.png" alt="Casa Barkada Salon Logo" />
         </a>
 
-        <ul class="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#team" class="nav-link">Our Team</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <a
           href="https://wa.me/971506584751"
-          class="btn btn-primary"
+          class="btn btn-primary nav-cta"
           target="_blank"
         >
           Book Now
         </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
 
     <main>
+      <!-- HERO -->
+
       <section class="hero" id="home">
         <div class="container hero-container">
           <div class="hero-content">
             <span class="hero-subtitle">Premium Salon Experience</span>
 
             <h1>
-              Beautiful Hair.<br />
-              Beautiful Confidence.
+              Beauty Begins.<br />
+              with Confidence.
             </h1>
 
             <p>
-              Experience premium hair, nails, beauty and waxing services in the
-              heart of Al Barsha 1, Dubai.
+              Professional hair, nail, eyelash, waxing, and facial services in a
+              warm and welcoming salon in Al Barsha, Dubai.
             </p>
 
             <div class="hero-buttons">
@@ -95,13 +107,632 @@
         </div>
       </section>
 
-      <section id="services"></section>
-      <section id="gallery"></section>
-      <section id="reviews"></section>
-      <section id="contact"></section>
+      <!-- SERVICES -->
+
+      <section class="services section" id="services">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Our Services</span>
+
+            <h2 class="section-title">
+              Beauty Services Designed<br />
+              For Your Everyday Glow
+            </h2>
+
+            <p class="section-description">
+              Explore our hair, nails, beauty, waxing, eyelash and massage
+              services at Casa Barkada Salon in Al Barsha 1, Dubai.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <img
+                src="assets/images/service-hair.webp"
+                alt="Hair services at Casa Barkada Salon"
+              />
+              <div class="service-content">
+                <h3>Hair Services</h3>
+                <ul>
+                  <li>Hair Cut</li>
+                  <li>Blow Dry</li>
+                  <li>Hair Wash</li>
+                  <li>Highlights</li>
+                  <li>Hair Color</li>
+                  <li>Hair Extension</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <img
+                src="assets/images/service-treatment.webp"
+                alt="Hair treatment services at Casa Barkada Salon"
+              />
+              <div class="service-content">
+                <h3>Hair Treatments</h3>
+                <ul>
+                  <li>Kera-Rebonding</li>
+                  <li>Botox Keratin</li>
+                  <li>Brazilian Hair Treatment</li>
+                  <li>Hair Perming</li>
+                  <li>Hair Spa</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <img
+                src="assets/images/service-nails.webp"
+                alt="Nail services at Casa Barkada Salon"
+              />
+              <div class="service-content">
+                <h3>Nail Services</h3>
+                <ul>
+                  <li>Manicure</li>
+                  <li>Pedicure</li>
+                  <li>Mani Gel</li>
+                  <li>Pedi Gel</li>
+                  <li>Foot Spa</li>
+                  <li>Nail Extension</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <img
+                src="assets/images/service-eyelash.webp"
+                alt="Eyelash services at Casa Barkada Salon"
+              />
+              <div class="service-content">
+                <h3>Eyelash Services</h3>
+                <ul>
+                  <li>Eyelash Curly</li>
+                  <li>Eyelash Extension Basic</li>
+                  <li>Premium Lash Options</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <img
+                src="assets/images/service-facial.webp"
+                alt="Facial services at Casa Barkada Salon"
+              />
+              <div class="service-content">
+                <h3>Facial Services</h3>
+                <ul>
+                  <li>Threading</li>
+                  <li>Normal Facial</li>
+                  <li>Facial with Mask</li>
+                  <li>Deep Facial</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <img
+                src="assets/images/service-waxing.webp"
+                alt="Waxing services at Casa Barkada Salon"
+              />
+              <div class="service-content">
+                <h3>Waxing Services</h3>
+                <ul>
+                  <li>Under Arm</li>
+                  <li>Full Arm</li>
+                  <li>Full Leg</li>
+                  <li>Brazilian Bikini Wax</li>
+                  <li>Full Body</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <img
+                src="assets/images/service-massage.webp"
+                alt="Massage services at Casa Barkada Salon"
+              />
+              <div class="service-content">
+                <h3>Massage Services</h3>
+                <ul>
+                  <li>Head Massage</li>
+                  <li>Hand Massage</li>
+                  <li>Foot Massage</li>
+                  <li>Back Massage</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card service-help-card">
+              <div class="service-help-content">
+                <span>Need help choosing?</span>
+                <h3>Let Us Recommend The Best Service For You</h3>
+                <p>
+                  Message us on WhatsApp and our team will guide you based on
+                  your hair, nails or beauty needs.
+                </p>
+
+                <a
+                  href="https://wa.me/971506584751"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  Ask on WhatsApp
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+
+      <section class="why section" id="why">
+        <div class="container why-container">
+          <div class="why-content">
+            <span class="section-subtitle">Why Choose Us</span>
+
+            <h2 class="section-title">
+              A Warm Salon Experience<br />
+              Made For Your Confidence
+            </h2>
+
+            <p class="section-description">
+              At Casa Barkada Salon, we focus on clean service, thoughtful care
+              and a relaxing experience from the moment you arrive.
+            </p>
+
+            <a
+              href="https://wa.me/971506584751"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              Book Appointment
+            </a>
+          </div>
+
+          <div class="why-grid">
+            <div class="why-item">
+              <span>01</span>
+              <h3>Professional Stylists</h3>
+              <p>
+                Our team provides careful service for hair, nails and beauty
+                treatments.
+              </p>
+            </div>
+
+            <div class="why-item">
+              <span>02</span>
+              <h3>Premium Products</h3>
+              <p>
+                We use salon-quality products for a polished and comfortable
+                finish.
+              </p>
+            </div>
+
+            <div class="why-item">
+              <span>03</span>
+              <h3>Clean & Relaxing Space</h3>
+              <p>
+                A bright, hygienic and welcoming salon environment in Al Barsha
+                1.
+              </p>
+            </div>
+
+            <div class="why-item">
+              <span>04</span>
+              <h3>Easy Booking</h3>
+              <p>
+                Message us directly on WhatsApp to ask, book or check
+                availability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+
+      <section class="gallery section" id="gallery">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Our Gallery</span>
+
+            <h2 class="section-title">See Our Beautiful Transformations</h2>
+
+            <p class="section-description">
+              From elegant hairstyles to stunning nails and a relaxing salon
+              atmosphere, explore moments from Casa Barkada Salon.
+            </p>
+          </div>
+
+          <div class="gallery-filter">
+            <button class="active">All</button>
+            <button>Hair</button>
+            <button>Nails</button>
+            <button>Beauty</button>
+            <button>Salon</button>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="assets/images/gallery/hair-1.webp" alt="Hair Service" />
+
+              <div class="gallery-overlay">
+                <h3>Hair Styling</h3>
+                <p>Premium Hair Services</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="assets/images/gallery/nail-1.webp" alt="Nail Service" />
+
+              <div class="gallery-overlay">
+                <h3>Nail Art</h3>
+                <p>Manicure & Pedicure</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="assets/images/gallery/salon-1.webp"
+                alt="Salon Interior"
+              />
+
+              <div class="gallery-overlay">
+                <h3>Salon Interior</h3>
+                <p>Modern & Relaxing Space</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="assets/images/gallery/beauty-1.webp"
+                alt="Beauty Service"
+              />
+
+              <div class="gallery-overlay">
+                <h3>Beauty Care</h3>
+                <p>Professional Beauty Services</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="assets/images/gallery/hair-2.webp" alt="Hair Styling" />
+
+              <div class="gallery-overlay">
+                <h3>Hair Coloring</h3>
+                <p>Fresh New Look</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="assets/images/gallery/nail-2.webp" alt="Gel Nails" />
+
+              <div class="gallery-overlay">
+                <h3>Gel Nails</h3>
+                <p>Elegant Nail Finish</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta-box">
+            <div class="cta-content">
+              <span class="section-subtitle">Book Your Visit</span>
+
+              <h2>Ready For Your Next Salon Visit?</h2>
+
+              <p>
+                Message us on WhatsApp to ask about services, prices or
+                appointment availability.
+              </p>
+            </div>
+
+            <a
+              href="https://wa.me/971506584751"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              Book via WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR TEAM -->
+
+      <section class="team section" id="team">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">OUR TEAM</span>
+
+            <h2 class="section-title">Meet Our Team</h2>
+
+            <p class="section-description">
+              Meet the passionate professionals behind Casa Barkada Salon.
+            </p>
+          </div>
+
+          <div class="team-grid">
+            <article class="team-card">
+              <img src="assets/images/Jasmine.webp" alt="Jasmine" />
+              <div class="team-content">
+                <h3>Jasmine</h3>
+                <p>Hair Stylist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Flower.webp" alt="Flower" />
+              <div class="team-content">
+                <h3>Flower</h3>
+                <p>Facial & Waxing</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Lorna.webp" alt="Lorna" />
+              <div class="team-content">
+                <h3>Lorna</h3>
+                <p>Hair Stylist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Yi Yi.webp" alt="Yi Yi" />
+              <div class="team-content">
+                <h3>Yi Yi</h3>
+                <p>Nails Artist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Na Na.webp" alt="Na Na" />
+              <div class="team-content">
+                <h3>Na Na</h3>
+                <p>Nails Artist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Khant.webp" alt="Khant" />
+              <div class="team-content">
+                <h3>Khant</h3>
+                <p>Hair Stylist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Sarita.webp" alt="Sarita" />
+              <div class="team-content">
+                <h3>Sarita</h3>
+                <p>Nails Artist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Thiri.webp" alt="Thiri" />
+              <div class="team-content">
+                <h3>Thiri</h3>
+                <p>Receptionist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Yin Yin.webp" alt="Yin Yin" />
+              <div class="team-content">
+                <h3>Yin Yin</h3>
+                <p>Nails Artist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/MJ.webp" alt="MJ" />
+              <div class="team-content">
+                <h3>MJ</h3>
+                <p>Cashier</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Melina.webp" alt="Melina" />
+              <div class="team-content">
+                <h3>Melina</h3>
+                <p>Nail Artist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Toni.webp" alt="Toni" />
+              <div class="team-content">
+                <h3>Toni</h3>
+                <p>Hair Stylist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Yin Yin.webp" alt="Yin Yin" />
+              <div class="team-content">
+                <h3>Yin Yin</h3>
+                <p>Nails Artist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Naw Ehl.webp" alt="Naw Ehl" />
+              <div class="team-content">
+                <h3>Naw Ehl</h3>
+                <p>Nails Artist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Chaw Chaw.webp" alt="Chaw Chaw" />
+              <div class="team-content">
+                <h3>Chaw Chaw</h3>
+                <p>Hair Stylist</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <img src="assets/images/Min Min.webp" alt="Min Min" />
+              <div class="team-content">
+                <h3>Min Min</h3>
+                <p>Hair Stylist</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+
+      <section class="contact section" id="contact">
+        <div class="container contact-container">
+          <div class="contact-content">
+            <span class="section-subtitle">Contact Us</span>
+
+            <h2 class="section-title">Visit Casa Barkada Salon</h2>
+
+            <p class="section-description">
+              Find us in Al Barsha 1, Dubai. Message us on WhatsApp for
+              services, prices or appointment availability.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Address</strong>
+                <p>
+                  Shop A 06, Emirates Souq 4, Al Barsha 1, Near Insurance Market
+                  Station Exit 1, Dubai, UAE
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <strong>WhatsApp / Phone</strong>
+                <p>
+                  <a href="https://wa.me/971506584751" target="_blank">
+                    +971 50 658 4751
+                  </a>
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <strong>Opening Hours</strong>
+                <p>Daily: 10:00 AM – 11:00 PM</p>
+              </div>
+
+              <div class="contact-item">
+                <strong>Instagram</strong>
+                <p>
+                  <a
+                    href="https://www.instagram.com/casabarkadasalon"
+                    target="_blank"
+                  >
+                    @casabarkadasalon
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/971506584751"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              Message on WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps?q=Emirates%20Souq%204%20Al%20Barsha%201%20Dubai&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <img src="assets/images/logo.png" alt="Casa Barkada Salon Logo" />
+          </a>
+
+          <p class="footer-description">
+            Premium Hair, Nails, Beauty & Waxing Salon located in Al Barsha 1,
+            Dubai.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+
+          <ul>
+            <li><a href="#services">Hair</a></li>
+            <li><a href="#services">Hair Treatment</a></li>
+            <li><a href="#services">Nails</a></li>
+            <li><a href="#services">Beauty</a></li>
+            <li><a href="#services">Massage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+
+          <ul>
+            <li>
+              <a
+                href="https://www.instagram.com/casabarkadasalon"
+                target="_blank"
+              >
+                Instagram
+              </a>
+            </li>
+
+            <li><a href="#" target="_blank">Facebook</a></li>
+
+            <li><a href="#" target="_blank">TikTok</a></li>
+
+            <li>
+              <a href="https://wa.me/971506584751" target="_blank">
+                WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-container">
+          <p>© 2026 Casa Barkada Salon. All Rights Reserved.</p>
+          <p>Designed & Developed by Eric</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="assets/js/main.js"></script>
   </body>
