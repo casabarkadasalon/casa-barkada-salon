@@ -1,0 +1,63 @@
+/* ==========================
+   CASA BARKADA SALON
+   DESIGN SYSTEM
+========================== */
+
+:root {
+  /* ========= COLORS ========= */
+
+  --color-primary: #fde8e4;
+  --color-secondary: #fff8f8;
+  --color-accent: #f4a261;
+
+  --color-white: #ffffff;
+  --color-text: #2e2e2e;
+  --color-text-light: #6b6b6b;
+  --color-border: #f2e8e5;
+
+  /* ========= TYPOGRAPHY ========= */
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Manrope", sans-serif;
+
+  /* Font Size */
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 4rem;
+
+  /* ========= SPACING ========= */
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 5rem;
+
+  /* ========= BORDER ========= */
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --radius-full: 999px;
+
+  /* ========= SHADOW ========= */
+
+  --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* ========= TRANSITION ========= */
+
+  --transition: all 0.3s ease;
+
+  /* ========= CONTAINER ========= */
+
+  --container-width: 1200px;
+}
