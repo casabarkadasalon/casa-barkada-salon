@@ -1,0 +1,17 @@
+{
+  "name": "Casa Barkada Salon",
+  "short_name": "Casa Barkada",
+  "description": "Premium Hair, Nails, Beauty & Waxing Salon in Al Barsha 1, Dubai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F8",
+  "theme_color": "#F4A261",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
