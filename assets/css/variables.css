@@ -1,63 +1,44 @@
-/* ==========================
+/* ==========================================
    CASA BARKADA SALON
    DESIGN SYSTEM
-========================== */
+========================================== */
 
 :root {
-  /* ========= COLORS ========= */
-
-  --color-primary: #fde8e4;
-  --color-secondary: #fff8f8;
-  --color-accent: #f4a261;
-
-  --color-white: #ffffff;
+  /* Colors */
+  --color-primary: #f4a261;
+  --color-primary-hover: #e98b3d;
+  --color-secondary: #fde8e4;
+  --color-background: #fff8f8;
+  --color-surface: #ffffff;
   --color-text: #2e2e2e;
-  --color-text-light: #6b6b6b;
+  --color-text-light: #666666;
   --color-border: #f2e8e5;
 
-  /* ========= TYPOGRAPHY ========= */
-
+  /* Typography */
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Manrope", sans-serif;
 
   /* Font Size */
-
-  --fs-xs: 0.75rem;
-  --fs-sm: 0.875rem;
+  --fs-small: 0.875rem;
   --fs-base: 1rem;
-  --fs-lg: 1.125rem;
-  --fs-xl: 1.5rem;
-  --fs-2xl: 2rem;
-  --fs-3xl: 3rem;
-  --fs-4xl: 4rem;
+  --fs-body: 1.125rem;
+  --fs-h3: 1.75rem;
+  --fs-h2: 2.25rem;
+  --fs-h1: clamp(3.5rem, 6vw, 5rem);
 
-  /* ========= SPACING ========= */
+  /* Layout */
+  --container-width: 1200px;
 
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 5rem;
-
-  /* ========= BORDER ========= */
-
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 30px;
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 32px;
   --radius-full: 999px;
 
-  /* ========= SHADOW ========= */
+  /* Shadow */
+  --shadow-soft: 0 25px 60px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 18px 35px rgba(244, 162, 97, 0.35);
 
-  --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  /* ========= TRANSITION ========= */
-
-  --transition: all 0.3s ease;
-
-  /* ========= CONTAINER ========= */
-
-  --container-width: 1200px;
+  /* Transition */
+  --transition: all 0.35s ease;
 }
