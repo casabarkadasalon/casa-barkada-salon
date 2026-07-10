@@ -1,40 +1,353 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- ==========================================
+       BASIC DOCUMENT SETTINGS
+  =========================================== -->
+
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Casa Barkada Salon | Premium Hair, Nails, Beauty & Waxing Salon in Al
-      Barsha, Dubai
-    </title>
+    <!-- ==========================================
+       PRIMARY SEO
+  =========================================== -->
+
+    <title>Casa Barkada Salon | Hair, Nails & Beauty in Al Barsha</title>
 
     <meta
       name="description"
-      content="Casa Barkada Salon is a premium hair, nails, beauty, lashes and waxing salon in Al Barsha 1, Dubai. Book your appointment today."
+      content="Visit Casa Barkada Salon in Al Barsha 1, Dubai for professional hair, nails, lashes, facials, waxing and massage services. Book your appointment today."
     />
 
     <meta name="author" content="Casa Barkada Salon" />
-    <meta name="robots" content="index, follow" />
+
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
     <meta name="theme-color" content="#F4A261" />
 
-    <link rel="icon" href="favicon.ico" />
+    <meta name="color-scheme" content="light" />
+
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- ==========================================
+       CANONICAL URL
+  =========================================== -->
+
+    <link rel="canonical" href="https://www.casabarkadasalon.com/" />
+
+    <!-- ==========================================
+       OPEN GRAPH
+       Facebook, WhatsApp and LinkedIn
+  =========================================== -->
+
+    <meta property="og:locale" content="en_AE" />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:site_name" content="Casa Barkada Salon" />
+
+    <meta
+      property="og:title"
+      content="Casa Barkada Salon | Hair, Nails & Beauty in Al Barsha"
+    />
+
+    <meta
+      property="og:description"
+      content="Professional hair, nails, lashes, facials, waxing and massage services in Al Barsha 1, Dubai."
+    />
+
+    <meta property="og:url" content="https://www.casabarkadasalon.com/" />
+
+    <meta
+      property="og:image"
+      content="https://www.casabarkadasalon.com/assets/images/casa-barkada-social-preview.webp"
+    />
+
+    <meta
+      property="og:image:secure_url"
+      content="https://www.casabarkadasalon.com/assets/images/casa-barkada-social-preview.webp"
+    />
+
+    <meta property="og:image:type" content="image/webp" />
+
+    <meta property="og:image:width" content="1200" />
+
+    <meta property="og:image:height" content="630" />
+
+    <meta
+      property="og:image:alt"
+      content="Casa Barkada Salon in Al Barsha 1, Dubai"
+    />
+
+    <!-- ==========================================
+       TWITTER / X CARD
+  =========================================== -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Casa Barkada Salon | Hair, Nails & Beauty in Al Barsha"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Professional hair, nails, lashes, facials, waxing and massage services in Al Barsha 1, Dubai."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://www.casabarkadasalon.com/assets/images/casa-barkada-social-preview.webp"
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content="Casa Barkada Salon in Al Barsha 1, Dubai"
+    />
+
+    <!-- ==========================================
+       FAVICON AND WEB APP
+  =========================================== -->
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+
     <link rel="manifest" href="site.webmanifest" />
 
+    <!-- ==========================================
+       PERFORMANCE
+  =========================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preload"
+      href="assets/images/hero-main.webp"
+      as="image"
+      type="image/webp"
+    />
+
+    <!-- ==========================================
+       GOOGLE FONTS
+  =========================================== -->
 
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- ==========================================
+       STYLESHEETS
+  =========================================== -->
+
     <link rel="stylesheet" href="assets/css/variables.css" />
+
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- ==========================================
+       LOCAL BUSINESS STRUCTURED DATA
+       BEAUTY SALON JSON-LD
+  =========================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "@id": "https://www.casabarkadasalon.com/#beauty-salon",
+        "name": "Casa Barkada Salon",
+        "url": "https://www.casabarkadasalon.com/",
+        "description": "Casa Barkada Salon is a professional beauty salon in Al Barsha 1, Dubai offering hair, nail, eyelash, facial, waxing and massage services.",
+        "telephone": "+971506584751",
+        "image": "https://www.casabarkadasalon.com/assets/images/casa-barkada-social-preview.webp",
+        "logo": "https://www.casabarkadasalon.com/assets/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop A06, Emirates Souq 4, Near InsuranceMarket Metro Station Exit 1",
+          "addressLocality": "Al Barsha 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "10:00",
+            "closes": "23:00"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+971506584751",
+          "contactType": "customer service",
+          "areaServed": "AE",
+          "availableLanguage": ["English", "Filipino"]
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Casa Barkada Salon Services",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Hair Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Hair Cut"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Blow Dry"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Hair Color"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Hair Extensions"
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Hair Treatments",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Kera-Rebonding"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Botox Keratin"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Brazilian Hair Treatment"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Hair Perming"
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Nail Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Manicure"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pedicure"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Gel Nails"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Nail Extensions"
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Beauty Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Eyelash Services"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Facial Services"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Waxing Services"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Massage Services"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    </script>
   </head>
 
   <body>
+    <div class="preloader" id="preloader">
+      <div class="preloader-spinner"></div>
+    </div>
+
     <!-- HEADER -->
 
     <header class="header" id="header">
@@ -92,7 +405,14 @@
               Book Appointment
             </a>
 
-            <a href="#services" class="btn btn-outline">View Services</a>
+            <a
+              href="assets/pdf/casa-barkada-price-list.pdf"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Price List
+            </a>
           </div>
         </div>
 
@@ -105,7 +425,9 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- ==========================================
+     SERVICES
+========================================== -->
 
     <section class="services section" id="services">
       <div class="container">
@@ -113,24 +435,29 @@
           <span class="section-subtitle">Our Services</span>
 
           <h2 class="section-title">
-            Beauty Services Designed<br />
-            For Your Everyday Glow
+            Professional Beauty Services Tailored For Every Style
           </h2>
 
           <p class="section-description">
-            Explore our hair, nails, beauty, waxing, eyelash and massage
-            services at Casa Barkada Salon in Al Barsha 1, Dubai.
+            From everyday beauty essentials to complete salon transformations,
+            discover premium services delivered with expert care and attention
+            to every detail.
           </p>
         </div>
 
         <div class="services-grid">
+          <!-- Hair Services -->
+
           <article class="service-card">
             <img
               src="assets/images/service-hair.webp"
               alt="Hair services at Casa Barkada Salon"
+              loading="lazy"
             />
+
             <div class="service-content">
               <h3>Hair Services</h3>
+
               <ul>
                 <li>Hair Cut</li>
                 <li>Blow Dry</li>
@@ -142,13 +469,18 @@
             </div>
           </article>
 
+          <!-- Hair Treatments -->
+
           <article class="service-card">
             <img
               src="assets/images/service-treatment.webp"
               alt="Hair treatment services at Casa Barkada Salon"
+              loading="lazy"
             />
+
             <div class="service-content">
               <h3>Hair Treatments</h3>
+
               <ul>
                 <li>Kera-Rebonding</li>
                 <li>Botox Keratin</li>
@@ -159,13 +491,18 @@
             </div>
           </article>
 
+          <!-- Nail Services -->
+
           <article class="service-card">
             <img
               src="assets/images/service-nails.webp"
               alt="Nail services at Casa Barkada Salon"
+              loading="lazy"
             />
+
             <div class="service-content">
               <h3>Nail Services</h3>
+
               <ul>
                 <li>Manicure</li>
                 <li>Pedicure</li>
@@ -177,13 +514,18 @@
             </div>
           </article>
 
+          <!-- Eyelash Services -->
+
           <article class="service-card">
             <img
               src="assets/images/service-eyelash.webp"
               alt="Eyelash services at Casa Barkada Salon"
+              loading="lazy"
             />
+
             <div class="service-content">
               <h3>Eyelash Services</h3>
+
               <ul>
                 <li>Eyelash Curly</li>
                 <li>Eyelash Extension Basic</li>
@@ -192,13 +534,18 @@
             </div>
           </article>
 
+          <!-- Facial Services -->
+
           <article class="service-card">
             <img
               src="assets/images/service-facial.webp"
               alt="Facial services at Casa Barkada Salon"
+              loading="lazy"
             />
+
             <div class="service-content">
               <h3>Facial Services</h3>
+
               <ul>
                 <li>Threading</li>
                 <li>Normal Facial</li>
@@ -208,13 +555,18 @@
             </div>
           </article>
 
+          <!-- Waxing Services -->
+
           <article class="service-card">
             <img
               src="assets/images/service-waxing.webp"
               alt="Waxing services at Casa Barkada Salon"
+              loading="lazy"
             />
+
             <div class="service-content">
               <h3>Waxing Services</h3>
+
               <ul>
                 <li>Under Arm</li>
                 <li>Full Arm</li>
@@ -225,13 +577,18 @@
             </div>
           </article>
 
+          <!-- Massage Services -->
+
           <article class="service-card">
             <img
               src="assets/images/service-massage.webp"
               alt="Massage services at Casa Barkada Salon"
+              loading="lazy"
             />
+
             <div class="service-content">
               <h3>Massage Services</h3>
+
               <ul>
                 <li>Head Massage</li>
                 <li>Hand Massage</li>
@@ -241,24 +598,326 @@
             </div>
           </article>
 
+          <!-- WhatsApp CTA Card -->
+
           <article class="service-card service-help-card">
             <div class="service-help-content">
               <span>Need help choosing?</span>
+
               <h3>Let Us Recommend The Best Service For You</h3>
+
               <p>
-                Message us on WhatsApp and our team will guide you based on your
-                hair, nails or beauty needs.
+                Message us on WhatsApp and our beauty specialists will recommend
+                the perfect service based on your hair, nails, skin, or beauty
+                goals.
               </p>
 
               <a
                 href="https://wa.me/971506584751"
                 class="btn btn-primary"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Casa Barkada Salon on WhatsApp"
               >
                 Ask on WhatsApp
               </a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     FEATURED PACKAGES
+========================================== -->
+
+    <section class="packages section" id="packages">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Featured Packages</span>
+
+          <h2 class="section-title">
+            Thoughtfully Combined For Your Complete Beauty Experience
+          </h2>
+
+          <p class="section-description">
+            Explore our carefully selected salon packages designed to make your
+            visit easier, more relaxing and beautifully complete.
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Package 1 -->
+
+          <article class="package-card">
+            <div class="package-number">01</div>
+
+            <div class="package-content">
+              <h3>Hair Refresh</h3>
+
+              <p class="package-description">
+                A simple refresh for cleaner, lighter and more polished
+                hair—ideal when you want a quick update without a major change.
+              </p>
+
+              <div class="package-includes">
+                <span>Package Includes</span>
+
+                <ul>
+                  <li>Hair Cut</li>
+                  <li>Hair Wash</li>
+                  <li>Blow Dry</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://wa.me/971506584751?text=Hello%20Casa%20Barkada%20Salon%2C%20I%20would%20like%20to%20ask%20about%20the%20Hair%20Refresh%20Package."
+                class="package-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ask About This Package
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Package 2 -->
+
+          <article class="package-card">
+            <div class="package-number">02</div>
+
+            <div class="package-content">
+              <h3>Hair Color</h3>
+
+              <p class="package-description">
+                Refresh your roots while restoring softness and shine with a
+                nourishing hair spa and a professional blow-dry finish.
+              </p>
+
+              <div class="package-includes">
+                <span>Package Includes</span>
+
+                <ul>
+                  <li>Root Color</li>
+                  <li>Hair Spa</li>
+                  <li>Blow Dry</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://wa.me/971506584751?text=Hello%20Casa%20Barkada%20Salon%2C%20I%20would%20like%20to%20ask%20about%20the%20Hair%20Color%20Package."
+                class="package-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ask About This Package
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Package 3 -->
+
+          <article class="package-card">
+            <div class="package-number">03</div>
+
+            <div class="package-content">
+              <h3>Botox Keratin</h3>
+
+              <p class="package-description">
+                Designed to smooth, soften and revive dry or difficult-to-manage
+                hair for a healthier-looking and more polished finish.
+              </p>
+
+              <div class="package-includes">
+                <span>Package Includes</span>
+
+                <ul>
+                  <li>Botox Keratin</li>
+                  <li>Hair Cut</li>
+                  <li>Hair Spa</li>
+                  <li>Blow Dry</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://wa.me/971506584751?text=Hello%20Casa%20Barkada%20Salon%2C%20I%20would%20like%20to%20ask%20about%20the%20Botox%20Keratin%20Package."
+                class="package-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ask About This Package
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Package 4 -->
+
+          <article class="package-card">
+            <div class="package-number">04</div>
+
+            <div class="package-content">
+              <h3>Pamper Me</h3>
+
+              <p class="package-description">
+                A complete self-care combination for refreshed nails, softer
+                feet and clean, defined brows in one relaxing salon visit.
+              </p>
+
+              <div class="package-includes">
+                <span>Package Includes</span>
+
+                <ul>
+                  <li>Manicure Gel</li>
+                  <li>Pedicure Gel</li>
+                  <li>Foot Spa</li>
+                  <li>Threading</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://wa.me/971506584751?text=Hello%20Casa%20Barkada%20Salon%2C%20I%20would%20like%20to%20ask%20about%20the%20Pamper%20Me%20Package."
+                class="package-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ask About This Package
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Package 5 -->
+
+          <article class="package-card">
+            <div class="package-number">05</div>
+
+            <div class="package-content">
+              <h3>Kera-Rebonding</h3>
+
+              <p class="package-description">
+                A smoothing and straightening package created for a sleeker
+                look, with finishing care to improve shine and manageability.
+              </p>
+
+              <div class="package-includes">
+                <span>Package Includes</span>
+
+                <ul>
+                  <li>Kera-Rebonding</li>
+                  <li>Hair Cut</li>
+                  <li>Hair Spa or Cellophane</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://wa.me/971506584751?text=Hello%20Casa%20Barkada%20Salon%2C%20I%20would%20like%20to%20ask%20about%20the%20Kera-Rebonding%20Package."
+                class="package-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ask About This Package
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Package 6 -->
+
+          <article class="package-card">
+            <div class="package-number">06</div>
+
+            <div class="package-content">
+              <h3>Brazilian Hair Treatment</h3>
+
+              <p class="package-description">
+                A restorative smoothing treatment that helps reduce frizz,
+                improve softness and leave the hair more manageable and refined.
+              </p>
+
+              <div class="package-includes">
+                <span>Package Includes</span>
+
+                <ul>
+                  <li>Brazilian Hair Treatment</li>
+                  <li>Hair Cut</li>
+                  <li>Hair Spa or Cellophane</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://wa.me/971506584751?text=Hello%20Casa%20Barkada%20Salon%2C%20I%20would%20like%20to%20ask%20about%20the%20Brazilian%20Hair%20Treatment%20Package."
+                class="package-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ask About This Package
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Package 7 -->
+
+          <article class="package-card package-card-featured">
+            <div class="featured-package-left">
+              <div class="package-number">07</div>
+
+              <h3>Complete Beauty Package</h3>
+
+              <p class="package-description">
+                An all-in-one beauty experience combining hair, nails, lashes
+                and brow care for a complete head-to-toe refresh.
+              </p>
+
+              <a
+                href="https://wa.me/971506584751?text=Hello%20Casa%20Barkada%20Salon%2C%20I%20would%20like%20to%20ask%20about%20the%20Complete%20Beauty%20Package."
+                class="package-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ask About This Package
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="featured-package-right">
+              <div class="package-badge">Complete Experience</div>
+
+              <div class="package-includes">
+                <span>Package Includes</span>
+
+                <ul>
+                  <li>Hair Cut</li>
+                  <li>Hair Spa</li>
+                  <li>Root Color</li>
+                  <li>Manicure Gel</li>
+                  <li>Pedicure Gel</li>
+                  <li>Eyelash Curly</li>
+                  <li>Threading</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="packages-note">
+          <p>
+            Package suitability and final pricing may vary based on hair length,
+            hair condition and individual service requirements. Message our team
+            for a personalised consultation.
+          </p>
+
+          <a
+            href="https://wa.me/971506584751?text=Hello%20Casa%20Barkada%20Salon%2C%20I%20would%20like%20help%20choosing%20the%20right%20package."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Help Me Choose a Package
+          </a>
         </div>
       </div>
     </section>
@@ -395,7 +1054,7 @@
           </article>
 
           <article class="team-card">
-            <img src="assets/images/Yi Yi.webp" alt="Yi Yi" />
+            <img src="assets/images/Yi-Yi.webp" alt="Yi Yi" />
             <div class="team-content">
               <h3>Yi Yi</h3>
               <p>Nails Artist</p>
@@ -403,7 +1062,7 @@
           </article>
 
           <article class="team-card">
-            <img src="assets/images/Na Na.webp" alt="Na Na" />
+            <img src="assets/images/Na-Na.webp" alt="Na Na" />
             <div class="team-content">
               <h3>Na Na</h3>
               <p>Nails Artist</p>
@@ -435,7 +1094,7 @@
           </article>
 
           <article class="team-card">
-            <img src="assets/images/Yin Yin.webp" alt="Yin Yin" />
+            <img src="assets/images/Yin-Yin.webp" alt="Yin Yin" />
             <div class="team-content">
               <h3>Yin Yin</h3>
               <p>Nails Artist</p>
@@ -467,7 +1126,7 @@
           </article>
 
           <article class="team-card">
-            <img src="assets/images/Yin Yin.webp" alt="Yin Yin" />
+            <img src="assets/images/Yin-Yin.webp" alt="Yin Yin" />
             <div class="team-content">
               <h3>Yin Yin</h3>
               <p>Nails Artist</p>
@@ -475,7 +1134,7 @@
           </article>
 
           <article class="team-card">
-            <img src="assets/images/Naw Ehl.webp" alt="Naw Ehl" />
+            <img src="assets/images/Naw-Ehl.webp" alt="Naw Ehl" />
             <div class="team-content">
               <h3>Naw Ehl</h3>
               <p>Nails Artist</p>
@@ -483,7 +1142,7 @@
           </article>
 
           <article class="team-card">
-            <img src="assets/images/Chaw Chaw.webp" alt="Chaw Chaw" />
+            <img src="assets/images/Chaw-Chaw.webp" alt="Chaw Chaw" />
             <div class="team-content">
               <h3>Chaw Chaw</h3>
               <p>Hair Stylist</p>
@@ -491,7 +1150,7 @@
           </article>
 
           <article class="team-card">
-            <img src="assets/images/Min Min.webp" alt="Min Min" />
+            <img src="assets/images/Min-Min.webp" alt="Min Min" />
             <div class="team-content">
               <h3>Min Min</h3>
               <p>Hair Stylist</p>
