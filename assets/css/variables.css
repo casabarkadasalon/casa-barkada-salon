@@ -4,41 +4,137 @@
 ========================================== */
 
 :root {
-  /* Colors */
+  /* ==========================================
+     COLORS
+  ========================================== */
+
   --color-primary: #f4a261;
   --color-primary-hover: #e98b3d;
+  --color-primary-soft: #fff0e4;
+
   --color-secondary: #fde8e4;
   --color-background: #fff8f8;
   --color-surface: #ffffff;
+
   --color-text: #2e2e2e;
   --color-text-light: #666666;
+  --color-text-muted: #7a7a7a;
+
   --color-border: #f2e8e5;
+  --color-border-strong: #ead8d3;
 
-  /* Typography */
-  --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Manrope", sans-serif;
+  --color-white: #ffffff;
+  --color-black: #000000;
 
-  /* Font Size */
+  /* ==========================================
+     TYPOGRAPHY
+  ========================================== */
+
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  --font-body: "Manrope", Arial, Helvetica, sans-serif;
+
+  /* Font sizes */
+
+  --fs-xs: 0.75rem;
   --fs-small: 0.875rem;
   --fs-base: 1rem;
-  --fs-body: 1.125rem;
-  --fs-h3: 1.75rem;
-  --fs-h2: 2.25rem;
-  --fs-h1: clamp(3.5rem, 6vw, 5rem);
+  --fs-body: 1.0625rem;
 
-  /* Layout */
+  --fs-h4: 1.25rem;
+  --fs-h3: clamp(1.5rem, 2.5vw, 1.75rem);
+  --fs-h2: clamp(2rem, 4vw, 2.75rem);
+  --fs-h1: clamp(2.75rem, 7vw, 5rem);
+
+  /* Font weights */
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Line heights */
+
+  --line-height-tight: 1.1;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.7;
+
+  /* Letter spacing */
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.08em;
+
+  /* ==========================================
+     LAYOUT
+  ========================================== */
+
   --container-width: 1200px;
+  --container-padding: 24px;
 
-  /* Radius */
+  --section-space: 110px;
+  --section-space-tablet: 88px;
+  --section-space-mobile: 72px;
+
+  /* ==========================================
+     SPACING
+  ========================================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+
+  /* ==========================================
+     BORDER RADIUS
+  ========================================== */
+
   --radius-sm: 8px;
   --radius-md: 16px;
-  --radius-lg: 32px;
+  --radius-lg: 28px;
+  --radius-xl: 32px;
   --radius-full: 999px;
 
-  /* Shadow */
-  --shadow-soft: 0 25px 60px rgba(0, 0, 0, 0.08);
-  --shadow-button: 0 18px 35px rgba(244, 162, 97, 0.35);
+  /* ==========================================
+     SHADOWS
+  ========================================== */
 
-  /* Transition */
-  --transition: all 0.35s ease;
+  --shadow-subtle: 0 8px 24px rgba(46, 46, 46, 0.05);
+
+  --shadow-soft: 0 24px 60px rgba(46, 46, 46, 0.08);
+
+  --shadow-card: 0 18px 45px rgba(46, 46, 46, 0.08);
+
+  --shadow-button: 0 16px 32px rgba(244, 162, 97, 0.3);
+
+  /* ==========================================
+     TRANSITIONS
+  ========================================== */
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s ease;
+  --transition-slow: 0.5s ease;
+
+  /* ==========================================
+     ACCESSIBILITY
+  ========================================== */
+
+  --focus-ring: 0 0 0 4px rgba(244, 162, 97, 0.28);
+
+  /* ==========================================
+     Z-INDEX
+  ========================================== */
+
+  --z-base: 1;
+  --z-header: 100;
+  --z-menu: 200;
+  --z-overlay: 500;
+  --z-preloader: 9999;
 }
