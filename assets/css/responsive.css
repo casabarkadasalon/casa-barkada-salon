@@ -419,3 +419,19 @@
     width: 160px;
   }
 }
+/* ==========================================
+   PACKAGES — FINAL 4-COLUMN OVERRIDE
+========================================== */
+
+@media (min-width: 1201px) {
+  .packages-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .package-card-featured {
+    grid-column: auto !important;
+    display: flex !important;
+    flex-direction: column;
+    min-width: 0;
+  }
+}
