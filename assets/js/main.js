@@ -32,6 +32,8 @@ window.addEventListener("scroll", updateHeaderState, {
 ========================================== */
 
 function openMenu() {
+  if (!navMenu || !navToggle) return;
+
   navMenu.classList.add("active");
   navToggle.classList.add("active");
 
@@ -40,6 +42,8 @@ function openMenu() {
 }
 
 function closeMenu() {
+  if (!navMenu || !navToggle) return;
+
   navMenu.classList.remove("active");
   navToggle.classList.remove("active");
 
@@ -48,6 +52,8 @@ function closeMenu() {
 }
 
 function toggleMenu() {
+  if (!navMenu) return;
+
   if (navMenu.classList.contains("active")) {
     closeMenu();
   } else {
@@ -62,14 +68,14 @@ if (navToggle && navMenu) {
     link.addEventListener("click", closeMenu);
   });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
       closeMenu();
     }
   });
 
-  document.addEventListener("click", (e) => {
-    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+  document.addEventListener("click", (event) => {
+    if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
       closeMenu();
     }
   });
@@ -87,33 +93,37 @@ if (navToggle && navMenu) {
 
 const sections = document.querySelectorAll("section[id]");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
 
-        if (link.getAttribute("href") === `#${entry.target.id}`) {
-          link.classList.add("active");
-        }
+          if (link.getAttribute("href") === `#${entry.target.id}`) {
+            link.classList.add("active");
+          }
+        });
       });
-    });
-  },
-  {
-    threshold: 0.5,
-  },
-);
+    },
+    {
+      threshold: 0.5,
+    },
+  );
 
-sections.forEach((section) => observer.observe(section));
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+}
 
 /* ==========================================
    PRELOADER
 ========================================== */
 
 function hidePreloader() {
-  if (!preloader) return;
+  if (!preloader || preloader.classList.contains("hidden")) return;
 
   preloader.classList.add("hidden");
 
@@ -125,11 +135,12 @@ function hidePreloader() {
 if (document.readyState === "complete") {
   hidePreloader();
 } else {
-  window.addEventListener("load", hidePreloader);
+  window.addEventListener("load", hidePreloader, {
+    once: true,
+  });
 }
 
 setTimeout(hidePreloader, 3000);
-
 /* ==========================================
    SCROLL REVEAL
 ========================================== */
@@ -138,24 +149,26 @@ const revealElements = document.querySelectorAll(
   ".reveal, .reveal-left, .reveal-right",
 );
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-      entry.target.classList.add("show");
+        entry.target.classList.add("show");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.15,
+    },
+  );
 
-      revealObserver.unobserve(entry.target);
-    });
-  },
-  {
-    threshold: 0.15,
-  },
-);
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+}
 
-revealElements.forEach((element) => {
-  revealObserver.observe(element);
-});
 /* ==========================================
    SCROLL TO TOP
 ========================================== */
@@ -168,7 +181,9 @@ function toggleScrollButton() {
   scrollTopButton.classList.toggle("show", window.scrollY > 400);
 }
 
-window.addEventListener("scroll", toggleScrollButton, { passive: true });
+window.addEventListener("scroll", toggleScrollButton, {
+  passive: true,
+});
 
 toggleScrollButton();
 
@@ -183,7 +198,7 @@ scrollTopButton?.addEventListener("click", () => {
    UNIVERSAL GTM / GA4 EVENT TRACKING
 ========================================================= */
 
-function sendGA4Event(eventName, eventParameters = {}) {
+function pushTrackingEvent(eventName, eventParameters = {}) {
   if (!eventName) return;
 
   window.dataLayer = window.dataLayer || [];
@@ -192,8 +207,6 @@ function sendGA4Event(eventName, eventParameters = {}) {
     event: eventName,
     ...eventParameters,
   });
-
-  console.log("GTM event pushed:", eventName, eventParameters);
 }
 
 document.addEventListener("click", (event) => {
@@ -203,15 +216,14 @@ document.addEventListener("click", (event) => {
 
   const eventName = trackedElement.dataset.gaEvent;
 
-  sendGA4Event(eventName, {
+  pushTrackingEvent(eventName, {
     item_name: trackedElement.dataset.gaName || "",
     item_category: trackedElement.dataset.gaCategory || "",
     button_location: trackedElement.dataset.gaLocation || "unknown",
-    button_text: trackedElement.textContent.trim() || "unknown",
+    button_text:
+      trackedElement.textContent.trim().replace(/\s+/g, " ") || "unknown",
     link_url: trackedElement.getAttribute("href") || "",
     page_location: window.location.href,
     page_title: document.title,
   });
 });
-
-console.log("main.js loaded");
