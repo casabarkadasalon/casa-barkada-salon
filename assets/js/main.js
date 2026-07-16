@@ -135,7 +135,7 @@ setTimeout(hidePreloader, 3000);
 ========================================== */
 
 const revealElements = document.querySelectorAll(
-  ".reveal, .reveal-left, .reveal-right"
+  ".reveal, .reveal-left, .reveal-right",
 );
 
 const revealObserver = new IntersectionObserver(
@@ -150,7 +150,7 @@ const revealObserver = new IntersectionObserver(
   },
   {
     threshold: 0.15,
-  }
+  },
 );
 
 revealElements.forEach((element) => {
@@ -165,17 +165,10 @@ const scrollTopButton = document.querySelector("#scroll-top");
 function toggleScrollButton() {
   if (!scrollTopButton) return;
 
-  scrollTopButton.classList.toggle(
-    "show",
-    window.scrollY > 400
-  );
+  scrollTopButton.classList.toggle("show", window.scrollY > 400);
 }
 
-window.addEventListener(
-  "scroll",
-  toggleScrollButton,
-  { passive: true }
-);
+window.addEventListener("scroll", toggleScrollButton, { passive: true });
 
 toggleScrollButton();
 
@@ -183,5 +176,41 @@ scrollTopButton?.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
+  });
+});
+/* =========================================================
+   GA4 CTA EVENT TRACKING
+========================================================= */
+
+function sendGA4Event(eventName, eventParameters = {}) {
+  if (typeof window.gtag !== "function") {
+    console.warn(
+      `GA4 event "${eventName}" was not sent because gtag is unavailable.`,
+    );
+    return;
+  }
+
+  window.gtag("event", eventName, eventParameters);
+}
+
+document.addEventListener("click", (event) => {
+  const trackedElement = event.target.closest("[data-ga-event]");
+
+  if (!trackedElement) {
+    return;
+  }
+
+  const eventName = trackedElement.dataset.gaEvent;
+  const buttonLocation = trackedElement.dataset.gaLocation || "unknown";
+  const destinationUrl = trackedElement.getAttribute("href") || "";
+  const buttonText = trackedElement.textContent.trim() || "unknown";
+
+  sendGA4Event(eventName, {
+    button_location: buttonLocation,
+    button_text: buttonText,
+    link_url: destinationUrl,
+    page_location: window.location.href,
+    page_title: document.title,
+    transport_type: "beacon",
   });
 });
