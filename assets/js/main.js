@@ -180,10 +180,12 @@ scrollTopButton?.addEventListener("click", () => {
 });
 
 /* =========================================================
-   GTM / GA4 CTA EVENT TRACKING
+   UNIVERSAL GTM / GA4 EVENT TRACKING
 ========================================================= */
 
 function sendGA4Event(eventName, eventParameters = {}) {
+  if (!eventName) return;
+
   window.dataLayer = window.dataLayer || [];
 
   window.dataLayer.push({
@@ -197,21 +199,19 @@ function sendGA4Event(eventName, eventParameters = {}) {
 document.addEventListener("click", (event) => {
   const trackedElement = event.target.closest("[data-ga-event]");
 
-  if (!trackedElement) {
-    return;
-  }
+  if (!trackedElement) return;
 
   const eventName = trackedElement.dataset.gaEvent;
-  const buttonLocation = trackedElement.dataset.gaLocation || "unknown";
-  const destinationUrl = trackedElement.getAttribute("href") || "";
-  const buttonText = trackedElement.textContent.trim() || "unknown";
 
   sendGA4Event(eventName, {
-    button_location: buttonLocation,
-    button_text: buttonText,
-    link_url: destinationUrl,
+    item_name: trackedElement.dataset.gaName || "",
+    item_category: trackedElement.dataset.gaCategory || "",
+    button_location: trackedElement.dataset.gaLocation || "unknown",
+    button_text: trackedElement.textContent.trim() || "unknown",
+    link_url: trackedElement.getAttribute("href") || "",
     page_location: window.location.href,
     page_title: document.title,
   });
 });
+
 console.log("main.js loaded");
