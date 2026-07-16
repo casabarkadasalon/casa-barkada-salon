@@ -214,3 +214,4 @@ document.addEventListener("click", (event) => {
     page_title: document.title,
   });
 });
+console.log("main.js loaded");
