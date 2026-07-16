@@ -178,19 +178,20 @@ scrollTopButton?.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
 /* =========================================================
-   GA4 CTA EVENT TRACKING
+   GTM / GA4 CTA EVENT TRACKING
 ========================================================= */
 
 function sendGA4Event(eventName, eventParameters = {}) {
-  if (typeof window.gtag !== "function") {
-    console.warn(
-      `GA4 event "${eventName}" was not sent because gtag is unavailable.`,
-    );
-    return;
-  }
+  window.dataLayer = window.dataLayer || [];
 
-  window.gtag("event", eventName, eventParameters);
+  window.dataLayer.push({
+    event: eventName,
+    ...eventParameters,
+  });
+
+  console.log("GTM event pushed:", eventName, eventParameters);
 }
 
 document.addEventListener("click", (event) => {
@@ -211,6 +212,5 @@ document.addEventListener("click", (event) => {
     link_url: destinationUrl,
     page_location: window.location.href,
     page_title: document.title,
-    transport_type: "beacon",
   });
 });
